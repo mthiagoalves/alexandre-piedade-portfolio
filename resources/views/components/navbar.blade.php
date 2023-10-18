@@ -29,6 +29,10 @@
                 </p>
             </div>
         </div>
+        <div class="text-right-banner">
+            UX/UI Designer <br>
+            Graphic Designer
+        </div>
         <div class="text-name-main-banner">
             <p>
                 Piedade - Alexandre

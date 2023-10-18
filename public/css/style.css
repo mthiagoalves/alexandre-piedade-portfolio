@@ -51,13 +51,22 @@ nav {
     position: absolute;
     background-color: #3e3f43;
     bottom: 45%;
-    width: 16.563rem;
+    width: 20rem;
     height: 5.938rem;
     border-top-right-radius: 3.125rem;
     border-bottom-right-radius: 3.125rem;
     -webkit-box-shadow: 0.25rem 0.25rem 0.938rem 0rem #000000bf;
     -moz-box-shadow: 0.25rem 0.25rem 0.938rem 0rem #000000bf;
     box-shadow: 0.25rem 0.25rem 0.938rem 0rem #000000bf;
+}
+
+.text-right-banner {
+    position: absolute;
+    bottom: 47%;
+    right: 3%;
+    color: #ffffff;
+    font-size: 2rem;
+    line-height: 1.875rem;
 }
 
 .img-located-in-pt {
@@ -93,11 +102,11 @@ nav {
 .text-located-in-pt {
     position: absolute;
     top: 1.25rem;
-    right: 6.5rem;
+    right: 5rem;
     color: #ffffff;
     line-height: 1.563rem;
-    text-align: end;
-    width: 50%;
+    text-align: start;
+    width: 30%;
 }
 
 .text-name-main-banner {
