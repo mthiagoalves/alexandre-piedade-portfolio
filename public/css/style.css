@@ -5,6 +5,10 @@
     font-family: "Roboto", "Courier New", Courier, monospace;
     max-width: 100vw;
 }
+
+body{
+    overflow-x: hidden;
+}
 nav {
     background-color: #292a2f;
 }
