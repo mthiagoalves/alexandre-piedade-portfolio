@@ -1,8 +1,9 @@
 <div class="container-fluid p-0">
     <div class="col-12 p-0 position-relative">
         <div class="blur"></div>
-        <img src="https://dummyimage.com/1920x1000/292a2f/0011ff" alt="banner" class="img-fluid initial-banner">
-        <div class="located-in-pt">
+        <img src="https://dummyimage.com/1920x1000/292a2f/0011ff" alt="banner" class="img-fluid d-none d-sm-block">
+        <img src="https://dummyimage.com/992x1350/292a2f/0011ff" alt="banner" class="img-fluid d-block d-sm-none">
+        <div class="located-in-pt d-none d-sm-block">
             <div class="img-located-in-pt">
                 <img src="{{ asset('/img/world.png') }}" alt="world" class="img-fluid rotate-image">
             </div>

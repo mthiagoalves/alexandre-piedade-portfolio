@@ -111,7 +111,8 @@
         </div>
         <div class="swiper-slide">
             <div class="slide-projects">
-                <img src="https://dummyimage.com/580x750/4c6951/fff" alt="" class="img-fluid img-slide-projects">
+                <img src="https://dummyimage.com/580x750/4c6951/fff" alt=""
+                    class="img-fluid img-slide-projects">
                 <div class="overflow">
                     <div class="content p-5">
                         <h3 class="title-project-overflow">Title Project</h3>
@@ -137,7 +138,8 @@
         </div>
         <div class="swiper-slide">
             <div class="slide-projects">
-                <img src="https://dummyimage.com/580x750/4c6951/fff" alt="" class="img-fluid img-slide-projects">
+                <img src="https://dummyimage.com/580x750/4c6951/fff" alt=""
+                    class="img-fluid img-slide-projects">
                 <div class="overflow">
                     <div class="content p-5">
                         <h3 class="title-project-overflow">Title Project</h3>
@@ -163,7 +165,8 @@
         </div>
         <div class="swiper-slide">
             <div class="slide-projects">
-                <img src="https://dummyimage.com/580x750/4c6951/fff" alt="" class="img-fluid img-slide-projects">
+                <img src="https://dummyimage.com/580x750/4c6951/fff" alt=""
+                    class="img-fluid img-slide-projects">
                 <div class="overflow">
                     <div class="content p-5">
                         <h3 class="title-project-overflow">Title Project</h3>
@@ -189,7 +192,8 @@
         </div>
         <div class="swiper-slide">
             <div class="slide-projects">
-                <img src="https://dummyimage.com/580x750/4c6951/fff" alt="" class="img-fluid img-slide-projects">
+                <img src="https://dummyimage.com/580x750/4c6951/fff" alt=""
+                    class="img-fluid img-slide-projects">
                 <div class="overflow">
                     <div class="content p-5">
                         <h3 class="title-project-overflow">Title Project</h3>
@@ -215,7 +219,8 @@
         </div>
         <div class="swiper-slide">
             <div class="slide-projects">
-                <img src="https://dummyimage.com/580x750/4c6951/fff" alt="" class="img-fluid img-slide-projects">
+                <img src="https://dummyimage.com/580x750/4c6951/fff" alt=""
+                    class="img-fluid img-slide-projects">
                 <div class="overflow">
                     <div class="content p-5">
                         <h3 class="title-project-overflow">Title Project</h3>
@@ -246,5 +251,4 @@
             </div>
         </div>
     </div>
-    <div class="swiper-scrollbar"></div>
 </div>

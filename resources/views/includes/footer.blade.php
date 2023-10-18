@@ -1,7 +1,6 @@
 <style>
     .container-footer {
         background-color: #292a2f;
-        height: 27rem;
     }
 
     .text-footer-hyperlink {
