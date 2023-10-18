@@ -17,7 +17,7 @@
 @endsection
 
 @section('main-content')
-    <div class="container p-0 mt-5" style="height: 100vh">
+    <div class="container p-0 my-5">
         <div class="row justify-content-between m-0">
             <div class="col-8">
                 <p class="text-left-after-banner">
@@ -34,7 +34,9 @@
         </div>
     </div>
 
-<div class="container-fluid offset-1 p-0 my-5">
-    @include('components.slide-projects')
-</div>
+    <div class="container-fluid offset-1 p-0 my-5">
+        @include('components.slide-projects')
+    </div>
+
+    @include('includes.footer')
 @endsection
