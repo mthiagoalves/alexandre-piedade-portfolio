@@ -58,20 +58,26 @@
     .text-socials:hover {
         border-bottom-color: #ffffff;
     }
+
+    @media(max-width: 756px) {
+        .local-time-space {
+            margin-top: 0.8rem;
+        }
+    }
 </style>
 
-<div class="container-fluid py-5 container-footer">
-    <div class="container mt-5">
+<div class="container-fluid pt-5 pb-sm-5 pb-3 p-0 container-footer">
+    <div class="container mt-sm-5">
         <div class="row justify-content-between m-0">
-            <div class="col-8 p-0">
+            <div class="col-sm-8 col-12 p-0">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-sm-6 col-12 my-3 my-sm-0">
                         <a class="text-footer-hyperlink p-2 px-4" target="_blank" href="mailto:alexandrepiedad@gmail.com"
                             title="E-mail: alexandrepiedad@gmail.com">
                             <i class="fa-solid fa-envelope" style="color: #ffffff;"></i> alexandrepiedad@gmail.com
                         </a>
                     </div>
-                    <div class="col-5">
+                    <div class="col-sm-5 col-12 my-3 my-sm-0">
                         <a class="text-footer-hyperlink p-2 px-4" target="_blank" href=""
                             title="Phone number: +351 913 748 996">
                             <i class="fa-solid fa-phone-volume"></i> +351 <span style="font-weight: 500">913 748
@@ -80,7 +86,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-sm-3 col-12 p-0 my-3 my-sm-0">
                 <p class="text-footer">
                     Handcrafted by AP. using a sketchbook, Figma & the millions of lines of code by Thiago Alves
                 </p>
@@ -102,21 +108,24 @@
                     </p>
                     <div class="col-12">
                         <div class="row align-items-center m-0">
-                            <div class="col-4 p-0 pr-2">
+                            <div class="col-sm-4 col-12 p-0 pr-2">
                                 <a class="text-socials" href="#" target="_blank">
                                     BEHANCE
                                 </a>
                             </div>
-                            <div class="col-4 p-0 px-2">
+                            <div class="col-sm-4 col-12 p-0 px-sm-2">
                                 <a class="text-socials" href="#" target="_blank">
                                     LINKEDIN
                                 </a>
                             </div>
-                            <div class="col-4">
+                            <div class="col-sm-4 col-12 d-none d-sm-block">
                                 <p class="text-footer">©2023</p>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-12 mt-3 text-center d-block d-sm-none">
+                    <p class="text-footer">©2023</p>
                 </div>
             </div>
         </div>

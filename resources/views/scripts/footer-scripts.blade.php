@@ -37,14 +37,17 @@
         spaceBetween: 15,
         initialSlide: 0,
         breakpoints: {
-            1400: {
-                slidesPerView: 4
+            1200: {
+                slidesPerView: 3
             },
-            992: {
-                slidesPerView: 3,
+            850: {
+                slidesPerView: 2,
             },
-            300: {
-                slidesPerView: 1,
+            450: {
+                slidesPerView: 2,
+            },
+            250: {
+                slidesPerView: 1
             }
         }
     });
