@@ -1,4 +1,6 @@
-
+<button  class="btn btn-info" x-data="" x-on:click.prevent="$dispatch('open-modal', 'add-socials')">
+    Add
+</button>
 
 <x-modal name="add-socials" focusable>
     <form method="post" action="" class="p-6">

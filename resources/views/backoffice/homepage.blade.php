@@ -39,15 +39,11 @@
                     <div class="btns-socials">
                         <div class="row">
                             <div class="col-6">
-                                <button  class="btn btn-info" x-data="" x-on:click.prevent="$dispatch('open-modal', 'add-socials')">
-                                    Add
-                                </button>
+
                                 @include('backoffice.components.content-modals.add-socials')
                             </div>
                             <div class="col-6">
-                                <button class="btn btn-success" x-data="" x-on:click.prevent="$dispatch('open-modal', 'show-socials')">
-                                    Edit
-                                </button>
+
                                 @include('backoffice.components.content-modals.show-socials')
                             </div>
                         </div>
