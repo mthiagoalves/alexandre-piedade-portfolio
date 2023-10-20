@@ -1,5 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.master')
 @section('meta')
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AP.</title>
 @endsection
 
 @section('style-include')
@@ -15,10 +19,11 @@
         }
 
         @media(max-width: 756px) {
-            .container-text-in-mobile{
+            .container-text-in-mobile {
                 position: relative;
                 height: 220px;
             }
+
             .text-left-after-banner {
                 font-size: 1.5rem;
                 line-height: 1.758rem;
