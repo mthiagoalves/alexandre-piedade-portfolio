@@ -32,7 +32,7 @@ nav {
 
 .text-logo-navbar {
     color: #ffffff;
-    font-size: 25px;
+    font-size: 1.563rem;
     font-weight: 600;
 }
 
@@ -41,13 +41,13 @@ nav {
     text-decoration: none;
     font-size: 1.25rem;
     padding: 0.5rem 1rem;
-    border: 1px solid transparent;
+    border: 0.063rem solid transparent;
     border-radius: 1.563rem;
     transition: ease-in-out 0.7s;
 }
 
 .nav-item a:hover {
-    border: 1px solid #ffffff;
+    border: 0.063rem solid #ffffff;
     border-radius: 1.563rem;
     background-color: #ffffff20;
 }
@@ -62,11 +62,11 @@ button.navbar-toggler {
 }
 
 .blur {
-    background: url("https://dummyimage.com/1920x1000/292a2f/0011ff") no-repeat
+    background: url("/img/homepage/banner-initial.png") no-repeat
         center center fixed;
     background-size: cover;
     overflow: hidden;
-    filter: blur(15px);
+    filter: blur(0.938rem);
     transition: filter 1s;
     position: absolute;
     height: 100%;
@@ -74,7 +74,7 @@ button.navbar-toggler {
 }
 
 .blur.click-blur {
-    filter: blur(0px);
+    filter: blur(0);
     transition: filter 1s;
 }
 
@@ -155,7 +155,7 @@ button.navbar-toggler {
 
 @media (max-width: 756px) {
     .blur {
-        background: url("https://dummyimage.com/992x1350/292a2f/0011ff")
+        background: url("/img/homepage/banner-initial-m.png")
             no-repeat center center fixed;
     }
     .text-right-banner {
