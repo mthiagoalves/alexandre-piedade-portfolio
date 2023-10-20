@@ -12,10 +12,10 @@
         </h2>
 
         <div class="mt-6">
-            <x-input-label for="text-footer" value="{{ __('Text Footer') }}" class="sr-only" />
-
-            <x-text-input id="text-footer" name="text-footer" type="text" class="mt-1 block w-3/4"
-                placeholder="{{ __('Text Footer') }}" />
+            
+            <textarea cols="10" rows="3" id="text-footer" name="text-footer" class="mt-1 block w-3/4"
+                placeholder="{{ __('Text Footer') }}">
+            </textarea>
         </div>
 
         <div class="mt-6 flex justify-end">

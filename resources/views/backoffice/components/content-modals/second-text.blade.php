@@ -12,9 +12,9 @@
         </h2>
 
         <div class="mt-6">
-            <x-input-label for="password" value="{{ __('Password') }}" class="sr-only" />
-            <textarea cols="10" rows="3" id="password" name="password" class="mt-1 block w-3/4"
-                placeholder="{{ __('Password') }}">
+            <x-input-label for="second-text" value="{{ __('Second Text') }}" class="sr-only" />
+            <textarea cols="10" rows="3" id="second-text" name="second-text" class="mt-1 block w-3/4"
+                placeholder="{{ __('Second Text') }}">
             </textarea>
 
         </div>
