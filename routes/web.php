@@ -28,7 +28,13 @@ Route::middleware(['auth', 'verified'])->group(function() {
     Route::get('/works', [BackofficeController::class, 'getWorks'])->name('works');
     Route::get('/about-me', [BackofficeController::class, 'getAbout'])->name('about');
 
-    Route::post('/changeInitialBanner', [BackofficeController::class, 'changeInitialBanner'])->name('changeInitialBanner');
+    Route::post('/change-initial-banner', [BackofficeController::class, 'changeInitialBanner'])->name('changeInitialBanner');
+    Route::patch('/update-occupation', [BackofficeController::class, 'updateOccupation'])->name('updateOccupation');
+    Route::patch('/update-first-text', [BackofficeController::class, 'updateFirstText'])->name('updateFirstText');
+    Route::patch('/update-second-text', [BackofficeController::class, 'updateSecondText'])->name('updateSecondText');
+    Route::patch('/update-text-footer', [BackofficeController::class, 'updateTextFooter'])->name('updateTextFooter');
+    Route::patch('/update-email', [BackofficeController::class, 'updateEmail'])->name('updateEmail');
+    Route::patch('/update-phone', [BackofficeController::class, 'updatePhone'])->name('updatePhone');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
