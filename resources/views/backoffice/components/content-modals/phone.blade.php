@@ -3,7 +3,7 @@
 </button>
 
 <x-modal name="change-phone" focusable>
-    <form method="post" action="" class="p-6">
+    <form id="phoneForm" class="p-6">
         @csrf
         @method('patch')
 
@@ -23,9 +23,53 @@
                 {{ __('Cancel') }}
             </x-secondary-button>
 
-            <x-green-button class="ml-3">
+            <x-green-button id="phoneButton" class="ml-3">
                 {{ __('Update phone') }}
             </x-green-button>
         </div>
     </form>
 </x-modal>
+
+<script>
+    const phoneButton = document.getElementById('phoneButton');
+    phoneButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        const form = document.getElementById('phoneForm');
+        const formData = new FormData(form);
+
+        fetch('{{ route('updatePhone') }}', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 200) {
+                    Swal.fire(
+                        'Success',
+                        data.message,
+                        'success'
+                    ).then((result) => {
+                        if (result.isConfirmed) {
+                            location.reload();
+                        }
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: data.message,
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            location.reload();
+                        }
+                    });
+                }
+            })
+            .catch(error => {
+                console.log('error');
+            });
+    });
+</script>

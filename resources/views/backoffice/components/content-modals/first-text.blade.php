@@ -3,10 +3,9 @@
 </button>
 
 <x-modal name="change-first-text" focusable>
-    <form method="post" action="" class="p-6">
+    <form id="firstTextForm" class="p-6">
         @csrf
-        @method('put')
-
+        @method('patch')
         <h2 class="text-lg font-medium text-gray-900">
             {{ __('You wanna change first text?') }}
         </h2>
@@ -24,9 +23,52 @@
                 {{ __('Cancel') }}
             </x-secondary-button>
 
-            <x-green-button class="ml-3">
-                {{ __('Update banner') }}
+            <x-green-button id="firstTextButton" class="ml-3">
+                {{ __('Update Text') }}
             </x-green-button>
         </div>
     </form>
 </x-modal>
+
+<script>
+    const firstTextButton = document.getElementById('firstTextButton');
+    firstTextButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        const form = document.getElementById('firstTextForm');
+        const formData = new FormData(form);
+        fetch('{{ route('updateFirstText') }}', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 200) {
+                    Swal.fire(
+                        'Success',
+                        data.message,
+                        'success'
+                    ).then((result) => {
+                        if (result.isConfirmed) {
+                            location.reload();
+                        }
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: data.message,
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            location.reload();
+                        }
+                    });
+                }
+            })
+            .catch(error => {
+                console.log('error');
+            });
+    });
+</script>

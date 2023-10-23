@@ -12,7 +12,7 @@
 </button>
 
 <x-modal name="change-banner-initial" focusable>
-    <form method="post" action="{{ route('changeInitialBanner') }}" class="p-6" enctype="multipart/form-data">
+    <form id="banner-upload-form" class="p-6">
         @csrf
 
         <h2 class="text-lg font-medium text-gray-900">
@@ -48,7 +48,7 @@
                 {{ __('Cancel') }}
             </x-secondary-button>
 
-            <x-green-button class="ml-3">
+            <x-green-button id="upload-button" class="ml-3">
                 {{ __('Update banner') }}
             </x-green-button>
         </div>
@@ -89,4 +89,45 @@
             Array.from(files).forEach(readAndPreview);
         }
     }
+    const uploadButton = document.getElementById('upload-button');
+    uploadButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        const form = document.getElementById('banner-upload-form');
+        const formData = new FormData(form);
+
+        fetch('{{ route('changeInitialBanner') }}', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 200) {
+                    Swal.fire(
+                        'Success',
+                        data.message,
+                        'success'
+                    ).then((result) => {
+                        if (result.isConfirmed) {
+                            location.reload();
+                        }
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: data.message,
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            location.reload();
+                        }
+                    });
+                }
+            })
+            .catch(error => {
+                console.log('error');
+            });
+    });
 </script>

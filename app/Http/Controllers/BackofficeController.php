@@ -31,7 +31,49 @@ class BackofficeController extends Controller
     public function changeInitialBanner(Request $request)
     {
         $dataImages = $request->all();
-        
+
         return HomepageRepository::changeInitialBanner($dataImages);
+    }
+
+    public function updateOccupation(Request $request)
+    {
+        $data = $request->all();
+
+        return HomepageRepository::updateOccupation($data);
+    }
+
+    public function updateFirstText(Request $request)
+    {
+        $data = $request->all();
+
+        return HomepageRepository::updateFirstText($data);
+    }
+
+    public function updateSecondText(Request $request)
+    {
+        $data = $request->all();
+
+        return HomepageRepository::updateSecondText($data);
+    }
+
+    public function updateTextFooter(Request $request)
+    {
+        $data = $request->all();
+
+        return HomepageRepository::updateTextFooter($data);
+    }
+
+    public function updateEmail(Request $request)
+    {
+        $data = $request->all();
+
+        return HomepageRepository::updateEmail($data);
+    }
+
+    public function updatePhone(Request $request)
+    {
+        $data = $request->all();
+
+        return HomepageRepository::updatePhone($data);
     }
 }
