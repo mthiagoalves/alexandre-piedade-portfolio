@@ -17,8 +17,8 @@ return new class extends Migration
             $table->longText('first_text');
             $table->longText('second_text');
             $table->longText('text_footer');
-            $table->text('email', 150);
-            $table->text('phone', 50);
+            $table->string('email', 100);
+            $table->string('phone', 50);
             $table->timestamps();
         });
     }

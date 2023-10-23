@@ -29,6 +29,7 @@ Route::middleware(['auth', 'verified'])->group(function() {
     Route::get('/about-me', [BackofficeController::class, 'getAbout'])->name('about');
 
     Route::post('/change-initial-banner', [BackofficeController::class, 'changeInitialBanner'])->name('changeInitialBanner');
+    Route::post('/add-new-social', [BackofficeController::class, 'addNewSocial'])->name('addNewSocial');
     Route::patch('/update-occupation', [BackofficeController::class, 'updateOccupation'])->name('updateOccupation');
     Route::patch('/update-first-text', [BackofficeController::class, 'updateFirstText'])->name('updateFirstText');
     Route::patch('/update-second-text', [BackofficeController::class, 'updateSecondText'])->name('updateSecondText');

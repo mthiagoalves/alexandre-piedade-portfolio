@@ -3,6 +3,7 @@
 namespace App\Http\Repositories\Backoffice;
 
 use App\Models\Homepage;
+use App\Models\Socials;
 use App\Traits\HttpResponses;
 use Illuminate\Support\Facades\Validator;
 
@@ -59,7 +60,7 @@ class HomepageRepository
             'occupation' => $validator->validated()['occupation']
         ]);
 
-        if($occupation){
+        if ($occupation) {
             return HttpResponses::success('Occupation has been updated', 200);
         }
 
@@ -82,7 +83,7 @@ class HomepageRepository
             'first_text' => $validator->validated()['first-text']
         ]);
 
-        if($firstText){
+        if ($firstText) {
             return HttpResponses::success('First text has been updated', 200);
         }
 
@@ -105,7 +106,7 @@ class HomepageRepository
             'second_text' => $validator->validated()['second-text']
         ]);
 
-        if($secondText){
+        if ($secondText) {
             return HttpResponses::success('Second text has been updated', 200);
         }
 
@@ -128,7 +129,7 @@ class HomepageRepository
             'text_footer' => $validator->validated()['text-footer']
         ]);
 
-        if($secondText){
+        if ($secondText) {
             return HttpResponses::success('Footer text has been updated', 200);
         }
 
@@ -151,7 +152,7 @@ class HomepageRepository
             'email' => $validator->validated()['email']
         ]);
 
-        if($secondText){
+        if ($secondText) {
             return HttpResponses::success('Email has been updated', 200);
         }
 
@@ -174,10 +175,33 @@ class HomepageRepository
             'phone' => $validator->validated()['phone']
         ]);
 
-        if($secondText){
+        if ($secondText) {
             return HttpResponses::success('Phone number has been updated', 200);
         }
 
         return HttpResponses::error('Something wrong to updated text', 400);
+    }
+
+    public static function addNewSocial($data)
+    {
+        $validator = Validator::make($data, [
+            'social-name' => 'string:100',
+            'link-social' => 'string'
+        ]);
+
+        if ($validator->fails()) {
+            return HttpResponses::error('Data invalid', 422, $validator->errors());
+        }
+
+        $socials = Socials::create([
+            'social_name' => $validator->validated()['social-name'],
+            'link' => $validator->validated()['link-social']
+        ]);
+
+        if ($socials) {
+            return HttpResponses::success('Social media add successfully', 200);
+        }
+
+        return HttpResponses::error('Something wrong to add social', 400);
     }
 }
