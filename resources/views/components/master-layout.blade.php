@@ -11,7 +11,9 @@
 <body>
     @include('components.navbar')
 
-    @yield('main-content')
+    <main>
+        {{ $slot }}
+    </main>
 
     @include('scripts.footer-scripts')
 </body>

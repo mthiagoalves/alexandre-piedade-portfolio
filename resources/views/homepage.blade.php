@@ -1,4 +1,3 @@
-@extends('layouts.master')
 @section('meta')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,7 +64,8 @@
     </style>
 @endsection
 
-@section('main-content')
+<x-master-layout>
+
     <div class="container p-0 my-5 container-text-in-mobile">
         <div class="row justify-content-between m-0">
             <div class="col-sm-8 col-12 div-text-left-in-mobile">
@@ -106,4 +106,4 @@
 
     @include('includes.footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-@endsection
+</x-master-layout>
