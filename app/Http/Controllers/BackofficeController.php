@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Repositories\Backoffice\HomepageRepository;
+use Illuminate\Http\Request;
+
 class BackofficeController extends Controller
 {
     public function getDashboard()
@@ -23,5 +26,12 @@ class BackofficeController extends Controller
     public function getAbout()
     {
         return view('backoffice.about');
+    }
+
+    public function changeInitialBanner(Request $request)
+    {
+        $dataImages = $request->all();
+        
+        return HomepageRepository::changeInitialBanner($dataImages);
     }
 }

@@ -12,9 +12,8 @@
 </button>
 
 <x-modal name="change-banner-initial" focusable>
-    <form method="post" action="" class="p-6">
+    <form method="post" action="{{ route('changeInitialBanner') }}" class="p-6" enctype="multipart/form-data">
         @csrf
-        @method('post')
 
         <h2 class="text-lg font-medium text-gray-900">
             {{ __('You wanna change initial banner?') }}
@@ -26,8 +25,9 @@
                         <img src="/img/homepage/banner-initial.png" class="img-fluid" alt="">
                     </div>
                     <label class="btn btn-light">
-                        Upload Desktop<input type="file" class="uploadFile img" value="Upload Photo"
-                            style="width: 0px;height: 0px;overflow: hidden;" accept="image/*">
+                        Upload Desktop
+                        <input name="banner-desktop" type="file" class="uploadFile img" value="Upload Photo"
+                            style="width: 0px;height: 0px;overflow: hidden;">
                     </label>
                 </div>
                 <div class="col-sm-3 col-12 imgUp">
@@ -35,8 +35,9 @@
                         <img src="/img/homepage/banner-initial-m.png" class="img-fluid" alt="">
                     </div>
                     <label class="btn btn-light">
-                        Upload Mobile<input type="file" class="uploadFile img" value="Upload Photo"
-                            style="width: 0px;height: 0px;overflow: hidden;" accept="image/*">
+                        Upload Mobile
+                        <input name="banner-mobile" type="file" class="uploadFile img" value="Upload Photo"
+                            style="width: 0px;height: 0px;overflow: hidden;">
                     </label>
                 </div>
             </div>
