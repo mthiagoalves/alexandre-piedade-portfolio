@@ -91,10 +91,7 @@
                     <div class="overflow">
                         <div class="content p-5">
                             <h3 class="title-project-overflow">{{ $project->title }}</h3>
-                            <p class="description-project-overflow">Lorem ipsum, dolor sit amet consectetur adipisicing
-                                elit. Autem magni voluptatibus
-                                necessitatibus eaque repellendus neque facilis ducimus culpa voluptates mollitia debitis
-                                quia deserunt eos, suscipit non, repellat ipsum odit exercitationem?</p>
+                            <p class="description-project-overflow">{{ $project->description }}</p>
                             <div class="col-12 p-0 mt-4">
                                 <div class="row justify-content-around m-0">
                                     <div class="col-4 p-0">

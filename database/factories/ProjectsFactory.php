@@ -20,7 +20,7 @@ class ProjectsFactory extends Factory
         return [
             'title' => 'Title Project - ' . static::$numberAsc++,
             'slug' => 'title-project',
-            'description' => $this->faker->text(150),
+            'description' => $this->faker->text(400),
             'order' => static::$numberAsc++
         ];
     }
