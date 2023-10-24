@@ -64,17 +64,14 @@
     </style>
 @endsection
 
-<x-master-layout>
-
+<x-master-layout :content="$content" :socials="$socials">
     <div class="container p-0 my-5 container-text-in-mobile">
         <div class="row justify-content-between m-0">
             <div class="col-sm-8 col-12 div-text-left-in-mobile">
                 <div class="text-in-mobile">
                     <div class="col-11 p-2 col-sm-12 p-sm-0">
                         <p class="text-left-after-banner">
-                            Passionate UI/UX and Graphic Designer, committed to improving user experiences and eager to
-                            merge
-                            graphic and product design skills for a dynamic career.
+                            {!! $content->first_text !!}
                         </p>
                     </div>
                     <div class="col-1 p-2 d-block d-sm-none arrows">
@@ -89,14 +86,11 @@
                     </div>
                     <div class="col-11 p-2 col-sm-12 p-sm-0">
                         <p class="text-right-after-banner">
-                            Creative problem solver who crafts intuitive designs, bringing together form and function to
-                            elevate
-                            user interactions and leave a lasting impression.
+                            {!! $content->second_text !!}
                         </p>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 

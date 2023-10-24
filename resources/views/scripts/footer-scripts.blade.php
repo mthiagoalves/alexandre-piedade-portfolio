@@ -17,16 +17,13 @@
         const divRight = document.querySelector('.div-text-right-in-mobile');
 
         if (isLeftHidden) {
-            // Se o estado atual é que divLeft está oculta, mostre-a novamente.
             divLeft.style.left = '0';
             divRight.style.left = '100vw';
         } else {
-            // Caso contrário, esconda divLeft e mostre divRight.
             divLeft.style.left = '-100vw';
             divRight.style.left = '0';
         }
 
-        // Inverta o estado atual.
         isLeftHidden = !isLeftHidden;
     });
 
@@ -37,6 +34,9 @@
         spaceBetween: 15,
         initialSlide: 0,
         breakpoints: {
+            1400: {
+                slidesPerView: 4
+            },
             1200: {
                 slidesPerView: 3
             },

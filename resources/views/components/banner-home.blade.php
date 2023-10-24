@@ -14,8 +14,7 @@
             </div>
         </div>
         <div class="text-right-banner">
-            UI/UX Designer <br>
-            Graphic Designer
+            {!! $content->occupation !!}
         </div>
         <div class="text-name-main-banner">
             <p>

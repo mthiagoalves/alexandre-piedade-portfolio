@@ -204,4 +204,28 @@ class HomepageRepository
 
         return HttpResponses::error('Something wrong to add social', 400);
     }
+
+    public static function updateSocial($data, $socialId)
+    {
+        dd($data);
+        $validator = Validator::make($data, [
+            'social-name' => 'string:100',
+            'link-social' => 'string'
+        ]);
+
+        if ($validator->fails()) {
+            return HttpResponses::error('Data invalid', 422, $validator->errors());
+        }
+
+        $social = Socials::where('id', $socialId)->update([
+            'social_name' => $validator->validated()['social-name'],
+            'link' => $validator->validated()['link-social']
+        ]);
+
+        if ($social) {
+            return HttpResponses::success('Social media update successfully', 200);
+        }
+
+        return HttpResponses::error('Something wrong to update social', 400);
+    }
 }

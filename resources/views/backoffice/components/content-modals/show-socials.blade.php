@@ -13,7 +13,7 @@
 
         <div class="col-12 mt-6">
             <div class="row">
-                @for ($i = 0; $i < 2; $i++)
+                @for ($i = 1; $i < 5; $i++)
                     <div class="col-6 p-3">
                         <div class="col-12">
                             <div class="row align-items-center">

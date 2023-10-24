@@ -246,8 +246,6 @@
         </div>
         <div class="swiper-slide">
             <div class="slide-projects">
-
-
             </div>
         </div>
     </div>

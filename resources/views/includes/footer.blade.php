@@ -72,23 +72,22 @@
             <div class="col-sm-8 col-12 p-0">
                 <div class="row">
                     <div class="col-sm-6 col-12 my-3 my-sm-0">
-                        <a class="text-footer-hyperlink p-2 px-4" target="_blank" href="mailto:alexandrepiedad@gmail.com"
-                            title="E-mail: alexandrepiedad@gmail.com">
-                            <i class="fa-solid fa-envelope" style="color: #ffffff;"></i> alexandrepiedad@gmail.com
+                        <a class="text-footer-hyperlink p-2 px-4" target="_blank" href="mailto:{{ $content->email }}"
+                            title="E-mail: {{ $content->email }}">
+                            <i class="fa-solid fa-envelope" style="color: #ffffff;"></i> {{ $content->email }}
                         </a>
                     </div>
                     <div class="col-sm-5 col-12 my-3 my-sm-0">
                         <a class="text-footer-hyperlink p-2 px-4" target="_blank" href=""
                             title="Phone number: +351 913 748 996">
-                            <i class="fa-solid fa-phone-volume"></i> +351 <span style="font-weight: 500">913 748
-                                996</span>
+                            <i class="fa-solid fa-phone-volume"></i> {!! $content->phone !!}
                         </a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-3 col-12 p-0 my-3 my-sm-0">
                 <p class="text-footer">
-                    Handcrafted by AP. using a sketchbook, Figma & the millions of lines of code by Thiago Alves
+                    {!! $content->text_footer !!}
                 </p>
             </div>
         </div>
@@ -99,7 +98,7 @@
                         Local Time
                     </p>
                     <p class="text-hours">
-                        08:40 AM - GMT+1
+                        {!! $localTime !!}
                     </p>
                 </div>
                 <div class="col-3 p-0">
@@ -108,16 +107,13 @@
                     </p>
                     <div class="col-12">
                         <div class="row align-items-center m-0">
-                            <div class="col-sm-4 col-12 p-0 pr-2">
-                                <a class="text-socials" href="#" target="_blank">
-                                    BEHANCE
-                                </a>
-                            </div>
-                            <div class="col-sm-4 col-12 p-0 px-sm-2">
-                                <a class="text-socials" href="#" target="_blank">
-                                    LINKEDIN
-                                </a>
-                            </div>
+                            @foreach ($socials as $social)
+                                <div class="col-sm-4 col-12 p-0 mr-2">
+                                    <a class="text-socials" href="{{ $social->link }}" target="_blank">
+                                        {{ $social->social_name }}
+                                    </a>
+                                </div>
+                            @endforeach
                             <div class="col-sm-4 col-12 d-none d-sm-block">
                                 <p class="text-footer">©2023</p>
                             </div>

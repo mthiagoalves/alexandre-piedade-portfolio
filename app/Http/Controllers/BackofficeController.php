@@ -83,4 +83,11 @@ class BackofficeController extends Controller
 
         return HomepageRepository::addNewSocial($data);
     }
+
+    public function updateSocial(Request $request, $socialId)
+    {
+        $data = $request->all();
+
+        return HomepageRepository::updateSocial($data, $socialId);
+    }
 }

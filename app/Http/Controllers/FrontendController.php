@@ -2,22 +2,35 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Repositories\HomepageRepository;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
     public function getHomepage()
     {
-        return view('homepage');
+        $content = HomepageRepository::getHomepageContent();
+        $socials = HomepageRepository::getSocial();
+        $localTime = HomepageRepository::getLocalTime();
+
+        return view('homepage', compact('content', 'socials', 'localTime'));
     }
 
     public function getPageAbout()
     {
-        return view('about');
+        $content = HomepageRepository::getHomepageContent();
+        $socials = HomepageRepository::getSocial();
+        $localTime = HomepageRepository::getLocalTime();
+
+        return view('about', compact('content', 'socials', 'localTime'));
     }
 
     public function getPageWork()
     {
-        return view('work');
+        $content = HomepageRepository::getHomepageContent();
+        $socials = HomepageRepository::getSocial();
+        $localTime = HomepageRepository::getLocalTime();
+        
+        return view('work', compact('content', 'socials', 'localTime'));
     }
 }

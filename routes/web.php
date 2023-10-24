@@ -30,6 +30,7 @@ Route::middleware(['auth', 'verified'])->group(function() {
 
     Route::post('/change-initial-banner', [BackofficeController::class, 'changeInitialBanner'])->name('changeInitialBanner');
     Route::post('/add-new-social', [BackofficeController::class, 'addNewSocial'])->name('addNewSocial');
+    Route::put('/update-social/{id}', [BackofficeController::class, 'updateSocial'])->name('updateSocial');
     Route::patch('/update-occupation', [BackofficeController::class, 'updateOccupation'])->name('updateOccupation');
     Route::patch('/update-first-text', [BackofficeController::class, 'updateFirstText'])->name('updateFirstText');
     Route::patch('/update-second-text', [BackofficeController::class, 'updateSecondText'])->name('updateSecondText');
