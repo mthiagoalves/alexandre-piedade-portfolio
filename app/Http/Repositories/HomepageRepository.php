@@ -3,7 +3,10 @@
 namespace App\Http\Repositories;
 
 use App\Http\Resources\HomepageResource;
+use App\Http\Resources\ProjectResource;
+use App\Http\Resources\SocialResource;
 use App\Models\Homepage;
+use App\Models\Projects;
 use App\Models\Socials;
 use App\Traits\HttpResponses;
 use Carbon\Carbon;
@@ -20,7 +23,7 @@ class HomepageRepository
 
     public static function getSocial()
     {
-        return Socials::all();
+        return SocialResource::collection(Socials::all());
     }
 
     public static function getLocalTime()
@@ -37,5 +40,10 @@ class HomepageRepository
         $formattedDateTime = $now->format('h:i A') . ' - GMT' . $gmtOffset;
 
         return $formattedDateTime;
+    }
+
+    public static function getAllProjects()
+    {
+        return ProjectResource::collection(Projects::orderBy('order', 'ASC')->get());
     }
 }

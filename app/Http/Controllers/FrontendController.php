@@ -12,8 +12,9 @@ class FrontendController extends Controller
         $content = HomepageRepository::getHomepageContent();
         $socials = HomepageRepository::getSocial();
         $localTime = HomepageRepository::getLocalTime();
+        $projects = HomepageRepository::getAllProjects();
 
-        return view('homepage', compact('content', 'socials', 'localTime'));
+        return view('homepage', compact('content', 'socials', 'localTime', 'projects'));
     }
 
     public function getPageAbout()
@@ -30,7 +31,7 @@ class FrontendController extends Controller
         $content = HomepageRepository::getHomepageContent();
         $socials = HomepageRepository::getSocial();
         $localTime = HomepageRepository::getLocalTime();
-        
+
         return view('work', compact('content', 'socials', 'localTime'));
     }
 }

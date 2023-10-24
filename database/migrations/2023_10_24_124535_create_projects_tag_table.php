@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('homepage_content', function (Blueprint $table) {
+        Schema::create('project_tags', function (Blueprint $table) {
             $table->id();
-            $table->text('occupation', 150);
-            $table->longText('first_text');
-            $table->longText('second_text');
-            $table->longText('text_footer');
-            $table->string('email', 100);
-            $table->string('phone', 100);
+            $table->unsignedBigInteger('tag_id');
+            $table->foreign('tag_id')->references('id')->on('tags');
+            $table->unsignedBigInteger('projects_id');
+            $table->foreign('projects_id')->references('id')->on('projects');
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('homepage_content');
+        Schema::dropIfExists('project_tag');
     }
 };

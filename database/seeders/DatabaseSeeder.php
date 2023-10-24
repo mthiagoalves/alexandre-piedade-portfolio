@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use Database\Factories\SocialsFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,8 +14,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
-
+        \App\Models\User::factory(1)->create();
+        \App\Models\Homepage::factory(1)->create();
+        \App\Models\Tags::factory(5)->create();
+        \App\Models\Projects::factory(6)->create();
+        \App\Models\ProjectTags::factory(8)->create();
+        SocialsFactory::new()->create();
+        SocialsFactory::new()->linkedin()->create();
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',

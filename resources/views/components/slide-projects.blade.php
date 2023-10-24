@@ -83,167 +83,36 @@
 
 <div class="swiper-container mySwiper">
     <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <div class="slide-projects">
-                <img src="https://dummyimage.com/580x750/4c6951/fff" alt="" class="img-fluid img-slide-projects">
-                <div class="overflow">
-                    <div class="content p-5">
-                        <h3 class="title-project-overflow">Title Project</h3>
-                        <p class="description-project-overflow">Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Autem magni voluptatibus
-                            necessitatibus eaque repellendus neque facilis ducimus culpa voluptates mollitia debitis
-                            quia deserunt eos, suscipit non, repellat ipsum odit exercitationem?</p>
-                        <div class="col-12 p-0 mt-4">
-                            <div class="row justify-content-around m-0">
-                                <div class="col-4 p-0">
-                                    <p class="tag-projects-overflow p-2 px-3">tag1</p>
-                                </div>
-                                <div class="col-4 p-0">
-                                    <p class="tag-projects-overflow p-2 px-3">tag2</p>
-                                </div>
+        @foreach ($projects as $project)
+            <div class="swiper-slide">
+                <div class="slide-projects">
+                    <img src="https://dummyimage.com/580x750/4c6951/fff" alt=""
+                        class="img-fluid img-slide-projects">
+                    <div class="overflow">
+                        <div class="content p-5">
+                            <h3 class="title-project-overflow">{{ $project->title }}</h3>
+                            <p class="description-project-overflow">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                elit. Autem magni voluptatibus
+                                necessitatibus eaque repellendus neque facilis ducimus culpa voluptates mollitia debitis
+                                quia deserunt eos, suscipit non, repellat ipsum odit exercitationem?</p>
+                            <div class="col-12 p-0 mt-4">
+                                <div class="row justify-content-around m-0">
+                                    <div class="col-4 p-0">
+                                        <p class="tag-projects-overflow p-2 px-3">tag1</p>
+                                    </div>
+                                    <div class="col-4 p-0">
+                                        <p class="tag-projects-overflow p-2 px-3">tag2</p>
+                                    </div>
 
+                                </div>
                             </div>
                         </div>
+                        <a href="#" class="btn-know-more p-2 px-3">Know More</a>
                     </div>
-                    <a href="#" class="btn-know-more p-2 px-3">Know More</a>
                 </div>
             </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="slide-projects">
-                <img src="https://dummyimage.com/580x750/4c6951/fff" alt=""
-                    class="img-fluid img-slide-projects">
-                <div class="overflow">
-                    <div class="content p-5">
-                        <h3 class="title-project-overflow">Title Project</h3>
-                        <p class="description-project-overflow">Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Autem magni voluptatibus
-                            necessitatibus eaque repellendus neque facilis ducimus culpa voluptates mollitia debitis
-                            quia deserunt eos, suscipit non, repellat ipsum odit exercitationem?</p>
-                        <div class="col-12 p-0 mt-4">
-                            <div class="row justify-content-around m-0">
-                                <div class="col-4 p-0">
-                                    <p class="tag-projects-overflow p-2 px-3">tag1</p>
-                                </div>
-                                <div class="col-4 p-0">
-                                    <p class="tag-projects-overflow p-2 px-3">tag2</p>
-                                </div>
+        @endforeach
 
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class="btn-know-more p-2 px-3">Know More</a>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="slide-projects">
-                <img src="https://dummyimage.com/580x750/4c6951/fff" alt=""
-                    class="img-fluid img-slide-projects">
-                <div class="overflow">
-                    <div class="content p-5">
-                        <h3 class="title-project-overflow">Title Project</h3>
-                        <p class="description-project-overflow">Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Autem magni voluptatibus
-                            necessitatibus eaque repellendus neque facilis ducimus culpa voluptates mollitia debitis
-                            quia deserunt eos, suscipit non, repellat ipsum odit exercitationem?</p>
-                        <div class="col-12 p-0 mt-4">
-                            <div class="row justify-content-around m-0">
-                                <div class="col-4 p-0">
-                                    <p class="tag-projects-overflow p-2 px-3">tag1</p>
-                                </div>
-                                <div class="col-4 p-0">
-                                    <p class="tag-projects-overflow p-2 px-3">tag2</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class="btn-know-more p-2 px-3">Know More</a>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="slide-projects">
-                <img src="https://dummyimage.com/580x750/4c6951/fff" alt=""
-                    class="img-fluid img-slide-projects">
-                <div class="overflow">
-                    <div class="content p-5">
-                        <h3 class="title-project-overflow">Title Project</h3>
-                        <p class="description-project-overflow">Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Autem magni voluptatibus
-                            necessitatibus eaque repellendus neque facilis ducimus culpa voluptates mollitia debitis
-                            quia deserunt eos, suscipit non, repellat ipsum odit exercitationem?</p>
-                        <div class="col-12 p-0 mt-4">
-                            <div class="row justify-content-around m-0">
-                                <div class="col-4 p-0">
-                                    <p class="tag-projects-overflow p-2 px-3">tag1</p>
-                                </div>
-                                <div class="col-4 p-0">
-                                    <p class="tag-projects-overflow p-2 px-3">tag2</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class="btn-know-more p-2 px-3">Know More</a>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="slide-projects">
-                <img src="https://dummyimage.com/580x750/4c6951/fff" alt=""
-                    class="img-fluid img-slide-projects">
-                <div class="overflow">
-                    <div class="content p-5">
-                        <h3 class="title-project-overflow">Title Project</h3>
-                        <p class="description-project-overflow">Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Autem magni voluptatibus
-                            necessitatibus eaque repellendus neque facilis ducimus culpa voluptates mollitia debitis
-                            quia deserunt eos, suscipit non, repellat ipsum odit exercitationem?</p>
-                        <div class="col-12 p-0 mt-4">
-                            <div class="row justify-content-around m-0">
-                                <div class="col-4 p-0">
-                                    <p class="tag-projects-overflow p-2 px-3">tag1</p>
-                                </div>
-                                <div class="col-4 p-0">
-                                    <p class="tag-projects-overflow p-2 px-3">tag2</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class="btn-know-more p-2 px-3">Know More</a>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="slide-projects">
-                <img src="https://dummyimage.com/580x750/4c6951/fff" alt=""
-                    class="img-fluid img-slide-projects">
-                <div class="overflow">
-                    <div class="content p-5">
-                        <h3 class="title-project-overflow">Title Project</h3>
-                        <p class="description-project-overflow">Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Autem magni voluptatibus
-                            necessitatibus eaque repellendus neque facilis ducimus culpa voluptates mollitia debitis
-                            quia deserunt eos, suscipit non, repellat ipsum odit exercitationem?</p>
-                        <div class="col-12 p-0 mt-4">
-                            <div class="row justify-content-around m-0">
-                                <div class="col-4 p-0">
-                                    <p class="tag-projects-overflow p-2 px-3">tag1</p>
-                                </div>
-                                <div class="col-4 p-0">
-                                    <p class="tag-projects-overflow p-2 px-3">tag2</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class="btn-know-more p-2 px-3">Know More</a>
-                </div>
-            </div>
-        </div>
         <div class="swiper-slide">
             <div class="slide-projects">
             </div>
