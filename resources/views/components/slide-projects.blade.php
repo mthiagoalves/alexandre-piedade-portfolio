@@ -74,7 +74,7 @@
     .tag-projects-overflow {
         color: #ffffff;
         text-decoration: none;
-        font-size: 1.25rem;
+        font-size: 1rem;
         border: 1px solid #ffffff;
         border-radius: 1.563rem;
         transition: ease-in-out 0.7s;
@@ -92,15 +92,15 @@
                         <div class="content p-5">
                             <h3 class="title-project-overflow">{{ $project->title }}</h3>
                             <p class="description-project-overflow">{{ $project->description }}</p>
-                            <div class="col-12 p-0 mt-4">
-                                <div class="row justify-content-around m-0">
-                                    <div class="col-4 p-0">
-                                        <p class="tag-projects-overflow p-2 px-3">tag1</p>
-                                    </div>
-                                    <div class="col-4 p-0">
-                                        <p class="tag-projects-overflow p-2 px-3">tag2</p>
-                                    </div>
-
+                            <div class="col-12 p-0 mt-2">
+                                <div class="row m-0">
+                                    @foreach ($project->tags as $tag)
+                                        <div class="col-6 pt-2 p-0">
+                                            <div class="col-12 p-1">
+                                                <p class="tag-projects-overflow p-2 px-3">{{ $tag->name }}</p>
+                                            </div>
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>

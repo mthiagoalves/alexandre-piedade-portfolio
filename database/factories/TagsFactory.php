@@ -17,8 +17,28 @@ class TagsFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->unique()->userName(),
-            'slug' => fake()->unique()->userName()
+            'name' => 'UI/UX Design',
+            'slug' => 'ui-ux'
         ];
+    }
+
+    public function webDesign()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'name' => 'Web Design',
+                'slug' => 'web-design'
+            ];
+        });
+    }
+
+    public function creativeDesign()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'name' => 'Creative Design',
+                'slug' => 'creative-design'
+            ];
+        });
     }
 }

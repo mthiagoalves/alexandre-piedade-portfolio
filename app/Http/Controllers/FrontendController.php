@@ -34,4 +34,11 @@ class FrontendController extends Controller
 
         return view('work', compact('content', 'socials', 'localTime'));
     }
+
+    public function test()
+    {
+        $projects = HomepageRepository::getAllProjects();
+
+        dd($projects);
+    }
 }
