@@ -1,11 +1,13 @@
 <style>
     .title-about-me,
-    .title-work-experience {
+    .title-work-experience,
+    .title-skills {
         font-size: 1rem;
         font-weight: 500;
     }
 
-    .text-about-me {
+    .text-about-me,
+    .text-skills {
         font-size: 2.25rem;
         text-indent: 15rem;
         line-height: 2.5rem;
@@ -21,14 +23,17 @@
         font-size: 1.25rem;
     }
 
-    .btn-lkd {
+    .btn-lkd,
+    .btn-skills {
         text-decoration: none;
         font-size: 1.25rem;
         border: 0.063rem solid #212529;
         border-radius: 1.563rem;
         transition: ease-in-out 0.7s;
     }
-    .btn-lkd:hover {
+
+    .btn-lkd:hover,
+    .btn-skills:hover {
         background-color: #21252920
     }
 </style>
@@ -213,7 +218,30 @@
             </div>
             <div class="col-10 offset-2 p-0 mt-5">
                 <a href="#" class="btn-lkd p-2 px-3">
-                    Wanna se my Linkedin?
+                    Wanna see my Linkedin?
+                </a>
+            </div>
+        </div>
+        <div class="row justify-content-between m-0 mt-5">
+            <div class="col-sm-2 col-12 ">
+                <div class="col-12 p-2 col-sm-12 p-sm-0">
+                    <p class="title-skills">
+                        Skills
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-10 col-12">
+                <div class="col-11 p-2 col-sm-12 p-sm-0">
+                    <p class="text-skills pb-3">
+                        User Interface Design · User Experience Design · Problem Solving · Research Skills · Design
+                        Thinking · Website Design · Editorial Design · Brand Identity · Package Design · Graphic Design
+                        · Product Design · Photography · Printing
+                    </p>
+                </div>
+            </div>
+            <div class="col-10 offset-2 p-0 mt-5">
+                <a href="#" class="btn-skills p-2 px-3">
+                    Wanna see my Linkedin?
                 </a>
             </div>
         </div>
@@ -223,14 +251,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        const button = document.querySelector('.btn-lkd');
+        const buttonLkd = document.querySelector('.btn-lkd');
 
-        button.onmouseover = function() {
-            button.textContent = "Let's see my Linkedin 😎";
+        buttonLkd.onmouseover = function() {
+            buttonLkd.textContent = "Let's see my Linkedin 😎";
         }
 
-        button.onmouseout = function() {
-            button.textContent = "Wanna se my Linkedin?";
+        buttonLkd.onmouseout = function() {
+            buttonLkd.textContent = "Wanna ses my Linkedin?";
+        }
+        const buttonSkills = document.querySelector('.btn-skills');
+
+        buttonSkills.onmouseover = function() {
+            buttonSkills.textContent = "Let's see some projects 🎨";
+        }
+
+        buttonSkills.onmouseout = function() {
+            buttonSkills.textContent = "Wanna see some projects?";
         }
     </script>
 </x-master-layout>
