@@ -10,14 +10,14 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav text-end">
-                <li class="nav-item my-2 mx-sm-3 d-block d-sm-none">
+            <ul class="navbar-nav text-center">
+                <li class="nav-item my-3 mx-sm-3 d-block d-sm-none">
                     <a class="" aria-current="page" href="{{ route('pageHomepage') }}">Homepage</a>
                 </li>
-                <li class="nav-item my-2 mx-sm-3">
+                <li class="nav-item my-3 mx-sm-3">
                     <a class="" aria-current="page" href="{{ route('pageAbout') }}">About</a>
                 </li>
-                <li class="nav-item my-2 mx-sm-3">
+                <li class="nav-item my-3 mx-sm-3">
                     <a class="" href="{{ route('pageWork') }}">Work</a>
                 </li>
             </ul>

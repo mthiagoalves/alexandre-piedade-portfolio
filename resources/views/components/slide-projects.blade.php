@@ -79,6 +79,12 @@
         border-radius: 1.563rem;
         transition: ease-in-out 0.7s;
     }
+
+    @media(max-width: 756px) {
+        .tag-projects-overflow {
+            font-size: 0.8rem;
+        }
+    }
 </style>
 
 <div class="swiper-container mySwiper">
@@ -91,7 +97,10 @@
                     <div class="overflow">
                         <div class="content p-5">
                             <h3 class="title-project-overflow">{{ $project->title }}</h3>
-                            <p class="description-project-overflow">{{ $project->description }}</p>
+                            <p class="description-project-overflow d-sm-block d-none">{{ $project->description }}</p>
+                            <p class="description-project-overflow d-sm-none d-block">
+                                {{ strlen($project->description) > 210 ? substr($project->description, 0, 210) . '...' : $project->description }}
+                            </p>
                             <div class="col-12 p-0 mt-2">
                                 <div class="row m-0">
                                     @foreach ($project->tags as $tag)
