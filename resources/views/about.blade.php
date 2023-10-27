@@ -1,13 +1,15 @@
 <style>
     .title-about-me,
     .title-work-experience,
-    .title-skills {
+    .title-skills,
+    .title-languages {
         font-size: 1rem;
         font-weight: 500;
     }
 
     .text-about-me,
-    .text-skills {
+    .text-skills,
+    .text-languages {
         font-size: 2.25rem;
         text-indent: 15rem;
         line-height: 2.5rem;
@@ -19,7 +21,7 @@
         font-weight: 500;
     }
 
-    .text-work-experience {
+    .text-work-experience, {
         font-size: 1.25rem;
     }
 
@@ -243,6 +245,22 @@
                 <a href="#" class="btn-skills p-2 px-3">
                     Wanna see my Linkedin?
                 </a>
+            </div>
+        </div>
+        <div class="row justify-content-between m-0 mt-5">
+            <div class="col-sm-2 col-12 ">
+                <div class="col-12 p-2 col-sm-12 p-sm-0">
+                    <p class="title-languages">
+                        Languages
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-10 col-12">
+                <div class="col-11 p-2 col-sm-12 p-sm-0">
+                    <p class="text-languages pb-3">
+                        <b>Portuguese</b> - Native · <b>English</b> - C1 · <b>Spanish</b> - B2
+                    </p>
+                </div>
             </div>
         </div>
     </div>
