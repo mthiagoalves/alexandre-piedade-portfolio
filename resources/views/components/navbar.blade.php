@@ -1,9 +1,7 @@
 <nav class="navbar navbar-expand-lg px-4 pt-3">
     <div class="container-fluid px-sm-5">
         <a class="navbar-brand" href="{{ route('pageHomepage') }}">
-            <p class="text-logo-navbar">
-                AP.
-            </p>
+            <img src="/img/logo.png" alt="logo" class="img-fluid">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

@@ -30,10 +30,9 @@ nav {
     }
 }
 
-.text-logo-navbar {
-    color: #ffffff;
-    font-size: 1.563rem;
-    font-weight: 600;
+.navbar-brand img{
+    max-width: 4.375rem;
+    filter: invert(1);
 }
 
 .nav-item a {
@@ -77,7 +76,7 @@ nav {
     position: absolute;
     background-color: #3e3f43;
     bottom: 45%;
-    width: 20rem;
+    width: 18rem;
     height: 5.938rem;
     border-top-right-radius: 3.125rem;
     border-bottom-right-radius: 3.125rem;
@@ -97,10 +96,10 @@ nav {
 
 .img-located-in-pt {
     position: absolute;
-    right: 0.625rem;
-    top: 0.375rem;
-    width: 5rem;
-    height: 5rem;
+    right: 1.25rem;
+    top: 1rem;
+    width: 4rem;
+    height: 4rem;
     background-color: #292a2f;
     border-radius: 50%;
     display: flex;
@@ -114,11 +113,12 @@ nav {
 
 .text-located-in-pt {
     position: absolute;
-    top: 1.25rem;
+    top: 1.875rem;
     right: 5rem;
     color: #ffffff;
-    line-height: 1.563rem;
+    line-height: 1rem;
     text-align: start;
+    font-size: .96rem;
     width: 30%;
 }
 
@@ -144,7 +144,7 @@ nav {
     }
 
     .img-located-in-pt img:hover {
-        animation: rotate 2s linear infinite;
+        animation: rotate 8s linear infinite;
     }
 }
 

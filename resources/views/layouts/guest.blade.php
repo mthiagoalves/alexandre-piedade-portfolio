@@ -22,20 +22,20 @@
     body{
         font-family: 'Roboto', Courier, monospace;
     }
-    .text-logo {
-        color: #292a2f;
-        font-size: 4rem;
-        font-weight: 600;
+    .img-logo {
+        max-width: 9rem;
+    }
+
+    .div-logo{
+        margin: 2rem 0rem;
     }
 </style>
 
 <body class="text-gray-900 antialiased">
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-        <div>
+        <div class="div-logo">
             <a href="/">
-                <p class="text-logo">
-                    AP.
-                </p>
+                <img src="/img/logo.png" alt="logo" class="img-fluid img-logo">
             </a>
         </div>
 

@@ -31,8 +31,9 @@ class FrontendController extends Controller
         $content = HomepageRepository::getHomepageContent();
         $socials = HomepageRepository::getSocial();
         $localTime = HomepageRepository::getLocalTime();
+        $projects = HomepageRepository::getAllProjects();
 
-        return view('work', compact('content', 'socials', 'localTime'));
+        return view('work', compact('content', 'socials', 'localTime', 'projects'));
     }
 
     public function test()

@@ -59,6 +59,13 @@
         border-bottom-color: #ffffff;
     }
 
+    @media(min-width: 756px) {
+        .offset-sm-footer-1 {
+            margin-left: 7.333333%;
+        }
+    }
+
+
     @media(max-width: 756px) {
         .local-time-space {
             margin-top: 0.8rem;
@@ -67,6 +74,30 @@
 </style>
 
 <div class="container-fluid pt-5 pb-sm-5 pb-3 p-0 container-footer">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid p-0 offset-sm-footer-1">
+            <a class="navbar-brand" href="{{ route('pageHomepage') }}">
+                <img src="/img/logo.png" alt="logo" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item my-3 mx-sm-3 d-block d-sm-none">
+                        <a class="" aria-current="page" href="{{ route('pageHomepage') }}">Homepage</a>
+                    </li>
+                    <li class="nav-item my-3 mx-sm-3">
+                        <a class="" aria-current="page" href="{{ route('pageAbout') }}">About</a>
+                    </li>
+                    <li class="nav-item my-3 mx-sm-3">
+                        <a class="" href="{{ route('pageWork') }}">Work</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container mt-sm-5">
         <div class="row justify-content-between m-0">
             <div class="col-sm-8 col-12 p-0">
@@ -103,7 +134,7 @@
                 </div>
                 <div class="col-3 p-0">
                     <p class="sample-text">
-                        Socials
+                        Let's connect
                     </p>
                     <div class="col-12">
                         <div class="row align-items-center m-0">
