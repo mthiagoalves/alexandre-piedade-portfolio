@@ -16,11 +16,12 @@
         "APP_URL": "https://bot.laravel-livewire.com",
 
         "DB_CONNECTION": "pgsql",
-        "DB_HOST": "ep-hidden-king-11038221.eu-central-1.postgres.vercel-storage.com",
+        "DB_HOST": "ep-hidden-king-11038221-pooler.eu-central-1.postgres.vercel-storage.com",
         "DB_PORT": "5432",
         "DB_DATABASE": "verceldb",
         "DB_USERNAME": "default",
-        "DB_PASSWORD": "BUoIVJR5eTE2",
+        "DB_PASSWORD": "endpoint=ep-hidden-king-11038221;BUoIVJR5eTE2",
+        "sslmode": "verify-full",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
